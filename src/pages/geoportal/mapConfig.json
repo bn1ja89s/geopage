@@ -1,0 +1,99 @@
+{
+    "center": [-1.928180, -78.711679],
+    "zoom": 7,
+    "baseLayers": [
+      {
+        "name": "OpenStreetMap",
+        "url": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      },
+      {
+        "name": "Google Streets",
+        "url": "https://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}",
+        "options": {
+          "maxZoom": 20,
+          "subdomains": ["mt0", "mt1", "mt2", "mt3"]
+        }
+      },
+      {
+        "name": "Google Satelital",
+        "url": "https://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}",
+        "options": {
+          "maxZoom": 20,
+          "subdomains": ["mt0", "mt1", "mt2", "mt3"]
+        }
+      },
+      {
+        "name": "Google Hybrid",
+        "url": "https://{s}.google.com/vt/lyrs=y&x={x}&y={y}&z={z}",
+        "options": {
+          "maxZoom": 20,
+          "subdomains": ["mt0", "mt1", "mt2", "mt3"]
+        }
+      },
+      {
+        "name": "Google Terrain",
+        "url": "https://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}",
+        "options": {
+          "maxZoom": 20,
+          "subdomains": ["mt0", "mt1", "mt2", "mt3"]
+        }
+      }
+    ],
+    "overlayLayers": [
+      {
+        "name": "Catastro Guamote",
+        "type": "wms",
+        "url": "http://localhost:8080/geoserver/guamote/wms?",
+        "options": {
+          "layers": "ch_catastro_guamote_pol",
+          "format": "image/png",
+          "transparent": true
+        }
+      },
+      {
+        "name": "Concesiones Mineras",
+        "type": "wms",
+        "url": "http://localhost:8080/geoserver/guamote/wms?",
+        "options": {
+          "layers": "ch_catastro_minero_pol",
+          "format": "image/png",
+          "transparent": true
+        }
+      },
+      {
+        "name": "Geología 50k",
+        "type": "wms",
+        "url": "http://localhost:8080/geoserver/guamote/wms?",
+        "options": {
+          "layers": "ch_geo_formaciones_pol",
+          "format": "image/png",
+          "transparent": true
+        }
+      },
+      {
+        "name": "Curvas de Nivel 100m",
+        "type": "wms",
+        "url": "http://localhost:8080/geoserver/guamote/wms?",
+        "options": {
+          "layers": "ch_curvas_de_nivel_100m_line",
+          "format": "image/png",
+          "transparent": true
+        }
+      }
+    ],
+    "markers": [
+      {
+        "position": [-1.92784, -78.71149],
+        "options": {
+          "draggable": true
+        },
+        "events": {
+          "move": "() => console.log('Eiffel moviendo')",
+          "click": "() => console.log('Click en el marcador')",
+          "dblclick": "() => console.log('Doble click en el marcador')"
+
+        }
+      }
+    ]
+  }
+  
